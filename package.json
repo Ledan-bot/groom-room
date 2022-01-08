@@ -1,0 +1,47 @@
+{
+  "name": "groom-room",
+  "version": "1.0.0",
+  "description": "A application to revitalize and increase web presence for a local dog grooming business.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webpack": "webpack watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ledan-bot/groom-room.git"
+  },
+  "author": "Nick Ledan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ledan-bot/groom-room/issues"
+  },
+  "homepage": "https://github.com/Ledan-bot/groom-room#readme",
+  "devDependencies": {
+    "@babel/core": "^7.16.7",
+    "@babel/preset-env": "^7.16.7",
+    "@babel/preset-react": "^7.16.7",
+    "@babel/preset-typescript": "^7.16.7",
+    "@types/node": "^17.0.8",
+    "@types/react": "^17.0.38",
+    "@types/react-dom": "^17.0.11",
+    "babel-loader": "^8.2.3",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.5.1",
+    "html-webpack-plugin": "^5.5.0",
+    "path": "^0.12.7",
+    "serve": "^13.0.2",
+    "source-map-loader": "^3.0.1",
+    "style-loader": "^3.3.1",
+    "terser-webpack-plugin": "^5.3.0",
+    "ts-loader": "^9.2.6",
+    "typescript": "^4.5.4",
+    "webpack": "^5.65.0",
+    "webpack-cli": "^4.9.1",
+    "webpack-dev-server": "^4.7.2"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}
