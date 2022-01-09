@@ -14,5 +14,7 @@ func setupServer() *gin.Engine {
 	router := gin.Default()
 	router.Use(static.Serve("/", static.LocalFile("./public", true)))
 	router.GET("/api/test", controllers.HandleTest)
+	router.GET("/api/appointments/all", controllers.GetAllAppointments)
+	router.GET("/api/customers/all", controllers.GetAllCustomers)
 	return router
 }
