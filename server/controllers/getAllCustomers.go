@@ -15,16 +15,13 @@ func GetAllCustomers(c *gin.Context) {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": err})
 	}
 	c.JSON(http.StatusAccepted, customers)
-
 }
 
-func getAllCustomers() ([]models.Customer, error) {
+func getAllCustomers() (customers []models.Customer, err error) {
 	db := db.Connection()
-	defer db.Close()
-	var customers []models.Customer
-	sqlStatement := `SELECT * FROM customers`
-	rows, err := db.Query(sqlStatement)
+	rows, err := db.Query("SELECT * FROM customers")
 	if err != nil {
+		fmt.Println(err)
 		return nil, fmt.Errorf(`error happened during SQL query: %v`, err)
 	}
 	defer rows.Close()

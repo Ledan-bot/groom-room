@@ -1,6 +1,15 @@
 import React from "react";
-const App: React.FC = (props) => {
-  return <div>Webpack is cool!</div>;
-};
+import Header from './components/header/Header'
 
-export default App;
+ const App: React.FC = () => {
+  return (
+    <>
+      <Header />
+      <main>
+        <h1>Welcome here</h1>
+      </main>
+    </>
+  )
+}
+
+export default App

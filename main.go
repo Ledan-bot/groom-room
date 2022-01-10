@@ -16,5 +16,7 @@ func setupServer() *gin.Engine {
 	router.GET("/api/test", controllers.HandleTest)
 	router.GET("/api/appointments/all", controllers.GetAllAppointments)
 	router.GET("/api/customers/all", controllers.GetAllCustomers)
+	router.GET("/api/animals/all", controllers.GetAllAnimals)
+	router.POST("/api/customer/new", controllers.CreateNewCustomer)
 	return router
 }

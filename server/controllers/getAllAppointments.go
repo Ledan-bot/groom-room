@@ -19,13 +19,14 @@ func GetAllAppointments(c *gin.Context) {
 
 func getAllAppointments() ([]models.Appointment, error) {
 	db := db.Connection()
-	defer db.Close()
+
 	var appointments []models.Appointment
 
 	sqlStatement := `SELECT * FROM appointments`
 
 	rows, err := db.Query(sqlStatement)
 	if err != nil {
+		fmt.Println(err)
 		return nil, fmt.Errorf(`error happened during SQL query: %v`, err)
 	}
 	defer rows.Close()

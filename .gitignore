@@ -106,3 +106,7 @@ dist
 #Compiled Directories/Files
 bundle.js
 bundle.js.LICENSE.txt
+
+
+#env
+.env
