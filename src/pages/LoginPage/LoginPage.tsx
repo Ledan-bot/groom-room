@@ -1,4 +1,5 @@
 import React from 'react'
+import Header from '../../components/header/Header'
 import Login from '../../components/login/Login'
 import NewAccount from '../../components/new_account/NewAccount'
 import './LoginPage.css'
@@ -6,9 +7,7 @@ import './LoginPage.css'
 const  LoginPage: React.FC = () => {
   return (
     <>
-      <header>
-        <h1>Groom Room User Login</h1>
-      </header>
+      <Header/>
       <main>
         <Login />
         <NewAccount />
