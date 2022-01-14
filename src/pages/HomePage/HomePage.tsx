@@ -1,5 +1,6 @@
 import React from 'react'
 import Header from '../../components/header/Header'
+import Footer from '../../components/footer/Footer'
 import './HomePage.css'
 
 const HomePage: React.FC = () => {
@@ -22,6 +23,7 @@ const HomePage: React.FC = () => {
           <h3>Grooming is Essential to Keeping your Pet Healthy!</h3>
         </section>
       </main>
+      <Footer />
     </>
   )
 }

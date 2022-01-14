@@ -1,0 +1,20 @@
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-left: 2px solid maroon;
+  border-right: 2px solid maroon;
+  margin-left: 5%;
+  margin-right: 5%;
+  width: 80%;
+}
+
+.footer-title {
+  color: maroon;
+  font-size: xx-large;
+  padding-bottom: 5%;
+}
+
+.author-title {
+  color:rgb(141, 149, 149)
+}

@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	setupServer().Run(":8071")
+	setupServer().Run(":8070")
 }
 
 func setupServer() *gin.Engine {
