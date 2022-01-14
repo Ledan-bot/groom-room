@@ -10,12 +10,16 @@ const HomePage: React.FC = () => {
         <h1 className="main-title">Your Neighborhood Pet Groomers - Handling All of Your Grooming Needs!</h1>
         <h2 className="services-title">Services</h2>
         <section className="sub-main-container">
-          <img src="/assets/finalcut.jpg" alt="dog image"></img>
-          <h3>Full Service Bathing 	&#38; Grooming For All Your Animal Needs</h3>
+          <img src="/assets/finalcut.jpg" alt="dog image" className="img-homepage" ></img>
+          <h3>Full Service Bathing	&#38; Grooming For All Your Animal Needs</h3>
+        </section>
+        <section className="sub-main-container-reverse">
+          <img src="/assets/fuzz.jpg" alt="dog image" className="img-homepage" ></img>
+          <h3>Weekly &#38; Monthly Touch-ups to Keep Your Family Members Looking Their Best!</h3>
         </section>
         <section className="sub-main-container">
-          <img src="/assets/fuzz.jpg"></img>
-          <h3>Weekly &#38; Touch-ups to Keep Your Family Members Looking Their Best!</h3>
+          <img src="/assets/headlights.jpg" alt="dog image" className="img-homepage"></img>
+          <h3>Grooming is Essential to Keeping your Pet Healthy!</h3>
         </section>
       </main>
     </>
