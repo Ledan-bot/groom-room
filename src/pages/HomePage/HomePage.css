@@ -1,0 +1,10 @@
+.main-title {
+  color: maroon;
+  font-size: x-large;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

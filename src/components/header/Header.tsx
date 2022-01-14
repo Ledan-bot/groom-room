@@ -13,7 +13,7 @@ const  Header: React.FC = () => {
             <FaPaw />
           </IconContext.Provider>
         </div>
-        <button>Schedule Appointment</button>
+        <button className="header-btn">Schedule Appointment</button>
       </header>
     </>
   )

@@ -1,13 +1,10 @@
 import React from "react";
-import Header from './components/header/Header'
+import HomePage from "./pages/HomePage/HomePage";
 
  const App: React.FC = () => {
   return (
     <>
-      <Header />
-      <main>
-        <h1>Welcome here</h1>
-      </main>
+      <HomePage />
     </>
   )
 }

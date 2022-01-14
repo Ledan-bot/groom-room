@@ -21,3 +21,11 @@
   color: white;
   width: 8vw;
 }
+
+.header-btn {
+  background-color: transparent;
+  cursor: pointer;
+  color: white;
+  border: 0px;
+
+}
