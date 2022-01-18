@@ -13,6 +13,7 @@ func GetAllCustomers(c *gin.Context) {
 	customers, err := getAllCustomers()
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": err})
+		return
 	}
 	c.JSON(http.StatusAccepted, customers)
 }

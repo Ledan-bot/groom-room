@@ -26,6 +26,7 @@ func CreateNewCustomer(c *gin.Context) {
 	InsertId, err := insertCustomer(customer)
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
+		return
 	}
 	c.JSON(http.StatusCreated, gin.H{
 		"ID":      InsertId,

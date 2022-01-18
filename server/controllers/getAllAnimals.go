@@ -13,6 +13,7 @@ func GetAllAnimals(c *gin.Context) {
 	animals, err := getallAnimals()
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": err})
+		return
 	}
 	c.JSON(202, animals)
 }

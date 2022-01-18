@@ -10,11 +10,17 @@ const Login: React.FC = () => {
     if (!checkEmail(email)) {
       alert("Incorrect Email Format")
     }
-    const body = {
+    const body: {
+      email: string,
+      password: string
+    } = {
       email: email,
       password: password
     }
     Axios.post("/api/login", body)
+      .then(res => {
+        console.log(res.data.status)
+      })
   }
 
   const checkEmail = (email: string): boolean => {

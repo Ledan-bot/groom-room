@@ -13,6 +13,7 @@ func GetAllAppointments(c *gin.Context) {
 	appointments, err := getAllAppointments()
 	if err != nil {
 		c.JSON(http.StatusInternalServerError, gin.H{"error": err})
+		return
 	}
 	c.JSON(http.StatusAccepted, appointments)
 }
