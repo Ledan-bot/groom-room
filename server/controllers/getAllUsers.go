@@ -9,30 +9,30 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-func GetAllCustomers(c *gin.Context) {
-	customers, err := getAllCustomers()
+func GetAllUsers(c *gin.Context) {
+	users, err := getAllUsers()
 	if err != nil {
-		c.JSON(http.StatusInternalServerError, gin.H{"error": err})
+		c.JSON(http.StatusInternalServerError, gin.H{"error": err.Error()})
 		return
 	}
-	c.JSON(http.StatusAccepted, customers)
+	c.JSON(http.StatusAccepted, users)
 }
 
-func getAllCustomers() (customers []models.Customer, err error) {
+func getAllUsers() (users []models.User, err error) {
 	db := db.Connection()
-	rows, err := db.Query("SELECT * FROM customers")
+	rows, err := db.Query("SELECT * FROM users")
 	if err != nil {
 		fmt.Println(err)
 		return nil, fmt.Errorf(`error happened during SQL query: %v`, err)
 	}
 	defer rows.Close()
 	for rows.Next() {
-		var customer models.Customer
-		err = rows.Scan(&customer.ID, &customer.FirstName, &customer.LastName, &customer.Email)
+		var user models.User
+		err = rows.Scan(&user.ID, &user.FirstName, &user.LastName, &user.Email, &user.Password)
 		if err != nil {
 			return nil, fmt.Errorf(`error happened during converting row into struct: %v`, err)
 		}
-		customers = append(customers, customer)
+		users = append(users, user)
 	}
-	return customers, err
+	return users, err
 }

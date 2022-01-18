@@ -17,7 +17,7 @@ const Login: React.FC = () => {
       email: email,
       password: password
     }
-    Axios.post("/api/login", body)
+    Axios.post("/api/users/login", body)
       .then(res => {
         console.log(res.data.status)
       })

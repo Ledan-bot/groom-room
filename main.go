@@ -7,17 +7,17 @@ import (
 )
 
 func main() {
-	setupServer().Run(":8070")
+	setupServer().Run(":8072")
 }
 
 func setupServer() *gin.Engine {
 	router := gin.Default()
 	router.Use(static.Serve("/", static.LocalFile("./public", true)))
 	router.GET("/api/test", controllers.HandleTest)
+	router.GET("/api/users/all", controllers.GetAllUsers)
+	router.POST("/api/users/new", controllers.CreateNewUser)
+	router.POST("/api/users/login", controllers.LoginUser)
 	router.GET("/api/appointments/all", controllers.GetAllAppointments)
-	router.GET("/api/customers/all", controllers.GetAllCustomers)
 	router.GET("/api/animals/all", controllers.GetAllAnimals)
-	router.POST("/api/customer/new", controllers.CreateNewCustomer)
-	router.POST("/api/login", controllers.LoginUser)
 	return router
 }
