@@ -1,3 +1,4 @@
+import  Axios  from 'axios'
 import React, {SyntheticEvent, useState} from 'react'
 
 const Login: React.FC = () => {
@@ -6,7 +7,19 @@ const Login: React.FC = () => {
 
   const handleSubmit = (e: SyntheticEvent) => {
     e.preventDefault()
-    alert("hello")
+    if (!checkEmail(email)) {
+      alert("Incorrect Email Format")
+    }
+    const body = {
+      email: email,
+      password: password
+    }
+    Axios.post("/api/login", body)
+  }
+
+  const checkEmail = (email: string): boolean => {
+    const regex = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/i
+    return (regex.test(email))
   }
   return (
     <section>
