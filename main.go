@@ -15,7 +15,7 @@ func setupServer() *gin.Engine {
 	router.Use(static.Serve("/", static.LocalFile("./public", true)))
 	router.GET("/api/test", controllers.HandleTest)
 	router.GET("/api/users/all", controllers.GetAllUsers)
-	router.POST("/api/users/new", controllers.CreateNewUser)
+	router.POST("/api/users/create", controllers.CreateNewUser)
 	router.POST("/api/users/login", controllers.LoginUser)
 	router.GET("/api/appointments/all", controllers.GetAllAppointments)
 	router.GET("/api/animals/all", controllers.GetAllAnimals)

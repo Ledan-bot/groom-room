@@ -24,12 +24,10 @@ func getallAnimals() (animals []models.Animal, err error) {
 	sqlStatement := "SELECT * FROM animals"
 
 	rows, err := db.Query(sqlStatement)
-	fmt.Println("Under Query")
-	fmt.Println(rows)
 	if err != nil {
 		return nil, fmt.Errorf(`error happened during SQL query: %v`, err)
 	}
-	fmt.Println("under Error")
+
 	defer rows.Close()
 	for rows.Next() {
 		var animal models.Animal
